@@ -12,43 +12,57 @@ class HomeScene : CCScene {
 	// MARK: - Public Objects
 
 	// MARK: - Private Objects
-	private let screenSize:CGSize = CCDirector.sharedDirector().viewSize()
 
 	// MARK: - Life Cycle
 	override init() {
 		super.init()
-        
-        let background: CCSprite = CCSprite(imageNamed: "bgCenario-ipad.png")
+
+        let background: CCSprite = CCSprite(imageNamed: "bgCenario.png")
         background.anchorPoint = CGPointMake(0.0, 0.0)
         background.position = CGPointMake(0.0, 0.0)
+        background.scale = 1
+        print(background.contentSize.width)
         self.addChild(background)
 
-		let label:CCLabelTTF = CCLabelTTF(string: "The Ultimate \nViking", fontName: "Verdana", fontSize: 90.0)
+		let label:CCLabelTTF = CCLabelTTF(string: "The Ultimate \nViking", fontName: "Verdana", fontSize: screenSize.height*0.117)
         label.horizontalAlignment = CCTextAlignment.Center
         label.color = CCColor.blackColor()
-		label.position = CGPointMake(self.screenSize.width/2, self.screenSize.height - 150)
+		label.position = CGPointMake(screenSize.width/2, screenSize.height/1.2)
 		label.anchorPoint = CGPointMake(0.5, 0.5)
 		self.addChild(label)
         
-        let labelBestScore:CCLabelTTF = CCLabelTTF(string: "Best Score: 0", fontName: "Verdana", fontSize: 50.0)
+        let labelBestScore:CCLabelTTF = CCLabelTTF(string: "Best Score: 0", fontName: "Verdana", fontSize:  screenSize.width*0.0488)
         labelBestScore.color = CCColor.blackColor()
-        labelBestScore.position = CGPointMake(self.screenSize.width/2, 40)
+        labelBestScore.position = CGPointMake(screenSize.width/2, screenSize.height/9)
         labelBestScore.anchorPoint = CGPointMake(0.5, 0.5)
         self.addChild(labelBestScore)
         
-        let img1: CCSprite = CCSprite(imageNamed: "player-ipad.png")
-        img1.position = CGPointMake(100,self.screenSize.height/2)
-        img1.scaleX = 3
-        img1.scaleY = 3
+        let img1: CCSprite = CCSprite(imageNamed: "player.png")
+        img1.position = CGPointMake(screenSize.width/5,screenSize.height/2)
+        img1.scale = 3
         self.addChild(img1)
+       
+        let img2:CCSprite = CCSprite(imageNamed: "Pirata 20018.png")
+        img2.position = CGPointMake(screenSize.width/4*3.1,screenSize.height/4)
+        img2.scale = 3
+        self.addChild(img2)
+        
+        let img3:CCSprite = CCSprite(imageNamed: "Pirata 10001.png")
+        img3.position = CGPointMake(screenSize.width/4*3.5,screenSize.height/4*3)
+        img3.scale = 3
+        self.addChild(img3)
+        
 
 		// ToGame Button
-		let toGameButton:CCButton = CCButton(title: "[ Start ]", fontName: "Verdana-Bold", fontSize: 38.0)
+		let toGameButton:CCButton = CCButton(title: "[ Start ]", fontName: "Verdana-Bold", fontSize: Float(screenSize.width) * 0.0371)
         toGameButton.color = CCColor.blackColor()
-		toGameButton.position = CGPointMake(self.screenSize.width/2.0, self.screenSize.height/2.0)
+		toGameButton.position = CGPointMake(screenSize.width/2.0, screenSize.height/2.0)
 		toGameButton.anchorPoint = CGPointMake(0.5, 0.5)
 //		toGameButton.setTarget(self, selector:"startTap:")
-		toGameButton.block = {_ in StateMachine.sharedInstance.changeScene(StateMachineScenes.GameScene, isFade:true)}
+		toGameButton.block = {_ in
+            SoundPlayHelper.sharedInstance.playSoundWithControl(GameMusicAndSoundFx.SoundFXButtonTap)
+            StateMachine.sharedInstance.changeScene(StateMachineScenes.GameScene, isFade:true)
+        }
 		self.addChild(toGameButton)
 	}
 

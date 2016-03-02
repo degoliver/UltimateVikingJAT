@@ -12,7 +12,7 @@ import Foundation
 	// MARK: Life Cycle
 	override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 		setupCocos2dWithOptions([CCSetupShowDebugStats: true])
-
+        
 		return true
 	}
 
@@ -31,7 +31,8 @@ import Foundation
 	}
 	
 	override func applicationDidEnterBackground(application:UIApplication) {
-		print("Enter Background")
+		StateMachine.sharedInstance.pauseScene()
+        print("Enter Background")
 	}
 	
 	override func applicationWillEnterForeground(application:UIApplication) {

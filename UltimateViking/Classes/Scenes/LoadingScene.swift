@@ -12,22 +12,24 @@ class LoadingScene : CCScene {
 	// MARK: - Public Objects
 
 	// MARK: - Private Objects
-	private let screenSize:CGSize = CCDirector.sharedDirector().viewSize()
 
 	// MARK: - Life Cycle
 	override init() {
 		super.init()
 
 		// Label loading
-		let label:CCLabelTTF = CCLabelTTF(string: "Loading...", fontName: "Chalkduster", fontSize: 36.0)
+		let label:CCLabelTTF = CCLabelTTF(string: "Loading...", fontName: "Chalkduster", fontSize: screenSize.width*0.0351)
 		label.color = CCColor.redColor()
-		label.position = CGPointMake(self.screenSize.width/2, self.screenSize.height/2)
+		label.position = CGPointMake(screenSize.width/2, screenSize.height/2)
 		label.anchorPoint = CGPointMake(0.5, 0.5)
 		self.addChild(label)
 
 		DelayHelper.sharedInstance.callBlock({ _ in
 			StateMachine.sharedInstance.changeScene(StateMachineScenes.HomeScene, isFade:true)
 		}, withDelay: 1.0)
+        
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("PirataPeixe.plist")
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("PirataPerneta.plist")
 	}
 
 	override func onEnter() {

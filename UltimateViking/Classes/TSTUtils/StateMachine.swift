@@ -80,4 +80,27 @@ class StateMachine {
 			}
 		}
 	}
+    
+    func pauseScene(){
+        let currentScene:CCScene = CCDirector.sharedDirector().runningScene
+
+        if(CCDirector.sharedDirector().paused){
+            if(currentScene.isKindOfClass(GameScene)){
+                (currentScene as! GameScene).pauseButton.title = "[ Pause ]"
+                (currentScene as! GameScene).labelPause.visible = false
+                (currentScene as! GameScene).canTap = true
+            }
+            CCDirector.sharedDirector().resume()
+            SoundPlayHelper.sharedInstance.setMusicDefaultVolume()
+            
+        } else {
+            if(currentScene.isKindOfClass(GameScene)){
+                (currentScene as! GameScene).pauseButton.title = "[ Resume ]"
+                (currentScene as! GameScene).labelPause.visible = true
+                (currentScene as! GameScene).canTap = false
+            }
+            SoundPlayHelper.sharedInstance.setMusicPauseVolume()
+            CCDirector.sharedDirector().pause()
+        }
+    }
 }
