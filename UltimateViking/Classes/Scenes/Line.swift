@@ -10,14 +10,14 @@ import UIKit
 
 class Line: CCSprite {
     // MARK: - Public Objects
-    var status:CGFloat = 0
+    var status:CGFloat = -1
     
     // MARK: - Private Objects
     
     // MARK: - Life Cycle
     override init() {
         super.init()
-        changeStatus(0)
+        changeStatus()
     }
     
     override func onEnter() {
@@ -49,16 +49,18 @@ class Line: CCSprite {
         super.init(imageNamed: imageName)
     }
     
-    func changeStatus(status:CGFloat){
-        self.status = status
+    func changeStatus(){
+        status++
         
         switch (status){
+        case 0:
+            spriteFrame = CCSpriteFrame.frameWithImageNamed("energiaVerde.png") as! CCSpriteFrame
         case 1:
             spriteFrame = CCSpriteFrame.frameWithImageNamed("energiaAmarela.png") as! CCSpriteFrame
         case 2:
             spriteFrame = CCSpriteFrame.frameWithImageNamed("energiaVermelha.png") as! CCSpriteFrame
         default:
-            spriteFrame = CCSpriteFrame.frameWithImageNamed("energiaVerde.png") as! CCSpriteFrame
+            return
         }
     }
     

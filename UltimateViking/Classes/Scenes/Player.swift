@@ -11,6 +11,7 @@ import UIKit
 class Player: CCSprite {
     // MARK: - Public Objects
     var damage:CGFloat = 1.0
+    var powerUP:Bool = false
     
     // MARK: - Private Objects
     

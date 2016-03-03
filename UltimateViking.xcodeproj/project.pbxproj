@@ -244,9 +244,9 @@
 		F16B48A51C8645DB00B193DF /* energiaAmarela-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B489A1C8645DB00B193DF /* energiaAmarela-hd.png */; };
 		F16B48A61C8645DB00B193DF /* energiaVerde-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B489B1C8645DB00B193DF /* energiaVerde-hd.png */; };
 		F16B48A71C8645DB00B193DF /* energiaVermelha-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B489C1C8645DB00B193DF /* energiaVermelha-hd.png */; };
-		F16B48A81C8645DB00B193DF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B489D1C8645DB00B193DF /* fire.png */; };
+		F16B48A81C8645DB00B193DF /* fire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B489D1C8645DB00B193DF /* fire-hd.png */; };
 		F16B48AB1C8645DB00B193DF /* player-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48A01C8645DB00B193DF /* player-hd.png */; };
-		F16B48AC1C8645DB00B193DF /* powerUP.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48A11C8645DB00B193DF /* powerUP.png */; };
+		F16B48AC1C8645DB00B193DF /* powerUP-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48A11C8645DB00B193DF /* powerUP-hd.png */; };
 		F16B48AD1C8645DB00B193DF /* tiro-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48A21C8645DB00B193DF /* tiro-hd.png */; };
 		F16B48B31C8651DF00B193DF /* bgCenario-iphone5hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48B21C8651DF00B193DF /* bgCenario-iphone5hd.png */; };
 		F16B48BA1C8653F300B193DF /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F16B48B61C8653F300B193DF /* Default-Landscape~ipad.png */; };
@@ -700,9 +700,9 @@
 		F16B489A1C8645DB00B193DF /* energiaAmarela-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "energiaAmarela-hd.png"; sourceTree = "<group>"; };
 		F16B489B1C8645DB00B193DF /* energiaVerde-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "energiaVerde-hd.png"; sourceTree = "<group>"; };
 		F16B489C1C8645DB00B193DF /* energiaVermelha-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "energiaVermelha-hd.png"; sourceTree = "<group>"; };
-		F16B489D1C8645DB00B193DF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		F16B489D1C8645DB00B193DF /* fire-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire-hd.png"; sourceTree = "<group>"; };
 		F16B48A01C8645DB00B193DF /* player-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-hd.png"; sourceTree = "<group>"; };
-		F16B48A11C8645DB00B193DF /* powerUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerUP.png; sourceTree = "<group>"; };
+		F16B48A11C8645DB00B193DF /* powerUP-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powerUP-hd.png"; sourceTree = "<group>"; };
 		F16B48A21C8645DB00B193DF /* tiro-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiro-hd.png"; sourceTree = "<group>"; };
 		F16B48B21C8651DF00B193DF /* bgCenario-iphone5hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgCenario-iphone5hd.png"; sourceTree = "<group>"; };
 		F16B48B61C8653F300B193DF /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -1658,13 +1658,13 @@
 				F16B489A1C8645DB00B193DF /* energiaAmarela-hd.png */,
 				F16B489B1C8645DB00B193DF /* energiaVerde-hd.png */,
 				F16B489C1C8645DB00B193DF /* energiaVermelha-hd.png */,
-				F16B489D1C8645DB00B193DF /* fire.png */,
+				F16B489D1C8645DB00B193DF /* fire-hd.png */,
 				F15974B81C86B82400A22110 /* PirataPeixe-hd.plist */,
 				F15974B91C86B82400A22110 /* PirataPeixe-hd.png */,
 				F15974B51C86B77D00A22110 /* PirataPerneta-hd.plist */,
 				F15974B41C86B77D00A22110 /* PirataPerneta-hd.png */,
 				F16B48A01C8645DB00B193DF /* player-hd.png */,
-				F16B48A11C8645DB00B193DF /* powerUP.png */,
+				F16B48A11C8645DB00B193DF /* powerUP-hd.png */,
 				F16B48A21C8645DB00B193DF /* tiro-hd.png */,
 			);
 			path = Iphone;
@@ -1772,7 +1772,7 @@
 				AC0588131C852250003DAE3B /* energiaAmarela-ipadhd.png in Resources */,
 				AC0588291C852250003DAE3B /* tiro-ipad.png in Resources */,
 				F16B48BA1C8653F300B193DF /* Default-Landscape~ipad.png in Resources */,
-				F16B48AC1C8645DB00B193DF /* powerUP.png in Resources */,
+				F16B48AC1C8645DB00B193DF /* powerUP-hd.png in Resources */,
 				F15974B71C86B77D00A22110 /* PirataPerneta-hd.plist in Resources */,
 				1255544919C0D85B00EC663C /* Images.xcassets in Resources */,
 				F16B48A51C8645DB00B193DF /* energiaAmarela-hd.png in Resources */,
@@ -1800,7 +1800,7 @@
 				AC05881A1C852250003DAE3B /* PirataPerneta-ipadhd.png in Resources */,
 				AC0588191C852250003DAE3B /* PirataPerneta-ipadhd.plist in Resources */,
 				F16B48B31C8651DF00B193DF /* bgCenario-iphone5hd.png in Resources */,
-				F16B48A81C8645DB00B193DF /* fire.png in Resources */,
+				F16B48A81C8645DB00B193DF /* fire-hd.png in Resources */,
 				F15974CC1C8758AC00355B27 /* paused-ipad.png in Resources */,
 				AC05881F1C852250003DAE3B /* energiaAmarela-ipad.png in Resources */,
 				AC0588231C852250003DAE3B /* PirataPeixe-ipad.plist in Resources */,

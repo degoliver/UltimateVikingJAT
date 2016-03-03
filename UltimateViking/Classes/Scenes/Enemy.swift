@@ -9,7 +9,7 @@
 class Enemy : CCSprite {
 	// MARK: - Public Objects
 	var life:CGFloat = 0
-    var damage:CGFloat = 0
+    var damage:Int = 0
     var speed:CGFloat = 0
     var enemyFrame:Int = 0
     
@@ -48,8 +48,6 @@ class Enemy : CCSprite {
         self.physicsBody.collisionType = "Enemy"
         self.physicsBody.collisionCategories = ["Enemy"]
         self.physicsBody.collisionMask = ["PlayerAxe"]
-        
-        
         
         self.addChild(self.spriteEnemy, z:2)
     }
@@ -97,10 +95,11 @@ class Enemy : CCSprite {
     }
     
     internal func moveMe() {
-        self.runAction(CCActionSequence.actionOne(CCActionMoveTo.actionWithDuration(CCTime(self.speed), position: CGPointMake(self.width() * -2, position.y)) as! CCActionFiniteTime,
+        self.runAction(CCActionSequence.actionOne(CCActionMoveTo.actionWithDuration(CCTime(20/self.speed), position: CGPointMake(self.width()/3 * -1, position.y)) as! CCActionFiniteTime,
             two: CCActionCallBlock.actionWithBlock({ _ in
                 self.stopAllSpriteActions()
                 self.removeFromParentAndCleanup(true)
+                (self.targetID! as! GameScene).line.changeStatus()
             }) as! CCActionFiniteTime)
             as! CCAction)
     }

@@ -21,7 +21,6 @@ class HomeScene : CCScene {
         background.anchorPoint = CGPointMake(0.0, 0.0)
         background.position = CGPointMake(0.0, 0.0)
         background.scale = 1
-        print(background.contentSize.width)
         self.addChild(background)
 
 		let label:CCLabelTTF = CCLabelTTF(string: "The Ultimate \nViking", fontName: "Verdana", fontSize: screenSize.height*0.117)

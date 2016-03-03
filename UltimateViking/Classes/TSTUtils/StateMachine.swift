@@ -83,7 +83,8 @@ class StateMachine {
     
     func pauseScene(){
         let currentScene:CCScene = CCDirector.sharedDirector().runningScene
-
+        if(!(currentScene as! GameScene).canPlay){ return  }
+        
         if(CCDirector.sharedDirector().paused){
             if(currentScene.isKindOfClass(GameScene)){
                 (currentScene as! GameScene).pauseButton.title = "[ Pause ]"
