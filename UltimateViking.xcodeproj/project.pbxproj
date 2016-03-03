@@ -222,12 +222,15 @@
 		AC05882D1C852266003DAE3B /* MusicInGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC05882A1C852266003DAE3B /* MusicInGame.mp3 */; };
 		AC05882E1C852266003DAE3B /* SoundFXButtonTap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC05882B1C852266003DAE3B /* SoundFXButtonTap.mp3 */; };
 		AC05882F1C852266003DAE3B /* SoundFXPuf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC05882C1C852266003DAE3B /* SoundFXPuf.mp3 */; };
+		ACDDC3851C87AF6200DC3F4F /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDC3841C87AF6200DC3F4F /* Enemy.swift */; };
+		ACDDC3891C87C52200DC3F4F /* EnemyDie.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACDDC3871C87C52200DC3F4F /* EnemyDie.plist */; };
+		ACDDC38A1C87C52200DC3F4F /* EnemyDie.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDDC3881C87C52200DC3F4F /* EnemyDie.png */; };
+		ACDDC38C1C87C8C700DC3F4F /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDC38B1C87C8C700DC3F4F /* PowerUp.swift */; };
 		F15974B61C86B77D00A22110 /* PirataPerneta-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F15974B41C86B77D00A22110 /* PirataPerneta-hd.png */; };
 		F15974B71C86B77D00A22110 /* PirataPerneta-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F15974B51C86B77D00A22110 /* PirataPerneta-hd.plist */; };
 		F15974BA1C86B82400A22110 /* PirataPeixe-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F15974B81C86B82400A22110 /* PirataPeixe-hd.plist */; };
 		F15974BB1C86B82400A22110 /* PirataPeixe-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F15974B91C86B82400A22110 /* PirataPeixe-hd.png */; };
 		F15974BD1C8742D100355B27 /* paused-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F15974BC1C8742D100355B27 /* paused-ipadhd.png */; };
-		F15974BF1C874A7E00355B27 /* PirataPerneta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15974BE1C874A7E00355B27 /* PirataPerneta.swift */; };
 		F15974C11C874C2D00355B27 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15974C01C874C2D00355B27 /* Player.swift */; };
 		F15974C31C8750EC00355B27 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15974C21C8750EC00355B27 /* Line.swift */; };
 		F15974C71C8754B600355B27 /* energiaAmarela-iphone5hd.png in Resources */ = {isa = PBXBuildFile; fileRef = F15974C41C8754B600355B27 /* energiaAmarela-iphone5hd.png */; };
@@ -675,12 +678,15 @@
 		AC05882A1C852266003DAE3B /* MusicInGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MusicInGame.mp3; sourceTree = "<group>"; };
 		AC05882B1C852266003DAE3B /* SoundFXButtonTap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SoundFXButtonTap.mp3; sourceTree = "<group>"; };
 		AC05882C1C852266003DAE3B /* SoundFXPuf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SoundFXPuf.mp3; sourceTree = "<group>"; };
+		ACDDC3841C87AF6200DC3F4F /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		ACDDC3871C87C52200DC3F4F /* EnemyDie.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnemyDie.plist; sourceTree = "<group>"; };
+		ACDDC3881C87C52200DC3F4F /* EnemyDie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyDie.png; sourceTree = "<group>"; };
+		ACDDC38B1C87C8C700DC3F4F /* PowerUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
 		F15974B41C86B77D00A22110 /* PirataPerneta-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PirataPerneta-hd.png"; sourceTree = "<group>"; };
 		F15974B51C86B77D00A22110 /* PirataPerneta-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PirataPerneta-hd.plist"; sourceTree = "<group>"; };
 		F15974B81C86B82400A22110 /* PirataPeixe-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PirataPeixe-hd.plist"; sourceTree = "<group>"; };
 		F15974B91C86B82400A22110 /* PirataPeixe-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PirataPeixe-hd.png"; sourceTree = "<group>"; };
 		F15974BC1C8742D100355B27 /* paused-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paused-ipadhd.png"; sourceTree = "<group>"; };
-		F15974BE1C874A7E00355B27 /* PirataPerneta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PirataPerneta.swift; sourceTree = "<group>"; };
 		F15974C01C874C2D00355B27 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F15974C21C8750EC00355B27 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		F15974C41C8754B600355B27 /* energiaAmarela-iphone5hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "energiaAmarela-iphone5hd.png"; sourceTree = "<group>"; };
@@ -807,6 +813,7 @@
 			isa = PBXGroup;
 			children = (
 				1255544819C0D85B00EC663C /* Images.xcassets */,
+				ACDDC3861C87C52200DC3F4F /* Particulas */,
 				AC0587F71C852250003DAE3B /* Imagens */,
 				F16B48B41C8653F300B193DF /* Splash */,
 				1226620E19F00CD6001FE3B9 /* DefaultParticleFire */,
@@ -1609,6 +1616,15 @@
 			path = Normal;
 			sourceTree = "<group>";
 		};
+		ACDDC3861C87C52200DC3F4F /* Particulas */ = {
+			isa = PBXGroup;
+			children = (
+				ACDDC3871C87C52200DC3F4F /* EnemyDie.plist */,
+				ACDDC3881C87C52200DC3F4F /* EnemyDie.png */,
+			);
+			path = Particulas;
+			sourceTree = "<group>";
+		};
 		F15974CA1C8754DD00355B27 /* Iphone5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1624,10 +1640,11 @@
 		F15974D01C875EEA00355B27 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				F15974BE1C874A7E00355B27 /* PirataPerneta.swift */,
+				ACDDC3841C87AF6200DC3F4F /* Enemy.swift */,
 				F15974C01C874C2D00355B27 /* Player.swift */,
 				F15974C21C8750EC00355B27 /* Line.swift */,
 				F15974D11C875F8000355B27 /* PlayerAxe.swift */,
+				ACDDC38B1C87C8C700DC3F4F /* PowerUp.swift */,
 			);
 			name = Objects;
 			path = Classes/Scenes;
@@ -1768,6 +1785,7 @@
 				AC0588281C852250003DAE3B /* powerUP-ipad.png in Resources */,
 				F16B48BE1C86542900B193DF /* Default-568h@2x.png in Resources */,
 				AC05882D1C852266003DAE3B /* MusicInGame.mp3 in Resources */,
+				ACDDC38A1C87C52200DC3F4F /* EnemyDie.png in Resources */,
 				F16B48A41C8645DB00B193DF /* bgCenario-hd.png in Resources */,
 				F15974B61C86B77D00A22110 /* PirataPerneta-hd.png in Resources */,
 				F15974CE1C87593B00355B27 /* paused-hd.png in Resources */,
@@ -1786,6 +1804,7 @@
 				F15974CC1C8758AC00355B27 /* paused-ipad.png in Resources */,
 				AC05881F1C852250003DAE3B /* energiaAmarela-ipad.png in Resources */,
 				AC0588231C852250003DAE3B /* PirataPeixe-ipad.plist in Resources */,
+				ACDDC3891C87C52200DC3F4F /* EnemyDie.plist in Resources */,
 				AC05882E1C852266003DAE3B /* SoundFXButtonTap.mp3 in Resources */,
 				AC0588121C852250003DAE3B /* bgCenario-ipadhd.png in Resources */,
 				F15974BB1C86B82400A22110 /* PirataPeixe-hd.png in Resources */,
@@ -1849,6 +1868,7 @@
 				1293CCFA19C08A25006A0E25 /* CCEffectNode.m in Sources */,
 				12F88AE019DDA1D20001531E /* CCEffectBlur.m in Sources */,
 				1293CD7419C08A25006A0E25 /* CCPhysicsBody.m in Sources */,
+				ACDDC3851C87AF6200DC3F4F /* Enemy.swift in Sources */,
 				1293CDE419C08A26006A0E25 /* NSEvent+CC.m in Sources */,
 				1293CE3B19C08A26006A0E25 /* ALDevice.m in Sources */,
 				1293CE0119C08A26006A0E25 /* NSThread+performBlock.m in Sources */,
@@ -1867,12 +1887,12 @@
 				1293CD9819C08A25006A0E25 /* CCSprite.m in Sources */,
 				1255543719C09CD200EC663C /* LoadingScene.swift in Sources */,
 				1293CE2019C08A26006A0E25 /* OALAudioTrack.m in Sources */,
+				ACDDC38C1C87C8C700DC3F4F /* PowerUp.swift in Sources */,
 				1293CE6119C08A26006A0E25 /* NSMutableDictionary+WeakReferences.m in Sources */,
 				12F88AE919DDA1D20001531E /* CCEffectSaturation.m in Sources */,
 				1293CD1F19C08A25006A0E25 /* CCActionManager.m in Sources */,
 				1293CD8119C08A25006A0E25 /* CCProgressNode.m in Sources */,
 				12F88AE819DDA1D20001531E /* CCEffectRenderer.m in Sources */,
-				F15974BF1C874A7E00355B27 /* PirataPerneta.swift in Sources */,
 				12F88AEA19DDA1D20001531E /* CCEffectStack.m in Sources */,
 				1293CD8D19C08A25006A0E25 /* CCResponderManager.m in Sources */,
 				1293CDBF19C08A26006A0E25 /* CCTransition.m in Sources */,

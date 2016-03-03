@@ -30,6 +30,10 @@ class LoadingScene : CCScene {
         
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("PirataPeixe.plist")
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("PirataPerneta.plist")
+        
+        if (NSUserDefaults.standardUserDefaults().integerForKey("KeyBestScore") <= 0) {
+            NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "KeyBestScore")
+        }
 	}
 
 	override func onEnter() {

@@ -31,7 +31,8 @@ class HomeScene : CCScene {
 		label.anchorPoint = CGPointMake(0.5, 0.5)
 		self.addChild(label)
         
-        let labelBestScore:CCLabelTTF = CCLabelTTF(string: "Best Score: 0", fontName: "Verdana", fontSize:  screenSize.width*0.0488)
+        let score:Int = NSUserDefaults.standardUserDefaults().integerForKey("KeyBestScore")
+        let labelBestScore:CCLabelTTF = CCLabelTTF(string: "Best Score: \(score)", fontName: "Verdana", fontSize:  screenSize.width*0.0488)
         labelBestScore.color = CCColor.blackColor()
         labelBestScore.position = CGPointMake(screenSize.width/2, screenSize.height/9)
         labelBestScore.anchorPoint = CGPointMake(0.5, 0.5)

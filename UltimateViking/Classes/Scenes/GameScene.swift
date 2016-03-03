@@ -14,10 +14,13 @@ class GameScene: CCScene, CCPhysicsCollisionDelegate {
 	// MARK: - Private Objects
     let labelPause:CCSprite = CCSprite(imageNamed: "paused.png")
     var pauseButton:CCButton = CCButton(title: "[ Pause ]", fontName: "Verdana-Bold", fontSize: Float(screenSize.height) * 0.04)
+    private var score:CGFloat = 0
     var labelScore:CCLabelTTF = CCLabelTTF(string: "Score: 0", fontName: "Verdana", fontSize: screenSize.height * 0.04)
     let player:Player = Player()
     let line:Line = Line()
     var physicsWorld:CCPhysicsNode = CCPhysicsNode()
+    
+    var speedGenerate:CCTime = 2.0
     
     var canPlay = true
     var canTap = true
@@ -79,6 +82,7 @@ class GameScene: CCScene, CCPhysicsCollisionDelegate {
 	override func onEnter() {
 		// Chamado apos o init quando entra no director
 		super.onEnter()
+        DelayHelper.sharedInstance.callFunc("generateEnemy", onTarget: self, withDelay: 0.1)
 	}
 
 	// Tick baseado no FPS
@@ -86,13 +90,67 @@ class GameScene: CCScene, CCPhysicsCollisionDelegate {
         
 	}
     
+    func generateEnemy() {
+        if (self.canPlay) {
+            
+            var enemyFrame:Int = 0
+            if (arc4random_uniform(100) > 70) {
+                enemyFrame = 2
+            }else{
+                enemyFrame = 1
+            }
+            
+            let positionY:CGFloat = CGFloat(arc4random_uniform(UInt32(screenSize.height/1.5)))
+            let enemy:Enemy = Enemy(target: self, enemyFrame: enemyFrame)
+            enemy.position = CGPointMake(screenSize.width + (CGFloat(arc4random_uniform(100) + 50)), positionY)
+            enemy.name = "enemy"
+            self.physicsWorld.addChild(enemy, z: ObjectsLayers.Foes.rawValue)
+            enemy.moveMe()
+            
+            // Apos geracao, registra nova geracao apos um tempo
+            DelayHelper.sharedInstance.callFunc("generateEnemy", onTarget: self, withDelay: self.speedGenerate)
+        }
+    }
+    
+    func updateScore(point:CGFloat) {
+        self.score+=point
+        self.labelScore.string = "Score: \(self.score)"
+    }
+    
     override func touchBegan(touch: UITouch!, withEvent event: UIEvent!) {
         if(canTap){
         let locationInView:CGPoint = CCDirector.sharedDirector().convertTouchToGL(touch)
         shipDoFire(locationInView)
         }
     }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, PlayerAxe axe: PlayerAxe!, Enemy enemy: Enemy!) -> Bool {
+        enemy.life--
+        
+        if (enemy.life <= 0) {
+            //Remove o inimigo
+            enemy.die()
+            SoundPlayHelper.sharedInstance.playSoundWithControl(GameMusicAndSoundFx.SoundFXPuf)
+            updateScore(enemy.damage)
+            
+            //if (arc4random_uniform(100) > 90) {
+                criaPowerUp(enemy.position)
+            //}
+        }
+        axe.removeFromParentAndCleanup(true)
+        return true
+    }
 
+    func criaPowerUp(position:CGPoint){
+        let power:PowerUp = PowerUp(event: "contabilizaPower", target: self)
+        power.position = position
+        self.addChild(power, z: ObjectsLayers.Foes.rawValue)
+    }
+    
+    func contabilizaPower(){
+        
+    }
+    
 	// MARK: - Private Methods
 
 	// MARK: - Public Methods
